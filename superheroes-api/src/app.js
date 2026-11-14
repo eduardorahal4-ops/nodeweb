@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const sequelize = require("./database/database");
 
 const Hero = require("./models/Hero.js");
 const Movie = require("./models/Movie.js");
 const heroesRoutes = require("./routes/heroes.routes.js");
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 Hero.belongsToMany(Movie, {
