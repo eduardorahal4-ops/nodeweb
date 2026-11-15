@@ -41,12 +41,12 @@ function App() {
   }
 
   return (
-    <div className='bg-amber-500 px-6 grid grid-cols-1 sm:grid-cols-2'>
+    <div className='bg-black/50 px-6 grid grid-cols-1 sm:grid-cols-2'>
       <h1 className='font-bold bg-blue-300 rounded-lg w-50 px-6 m-4 gap-4 text-xl shadow-lg flex items-center'>Super-Heróis</h1>
 
       <form onSubmit={handleCreateHero} className='grid grid-cols-1 md:grid-cols-3 gap-6 items-center'>
         <input 
-          className='bg-blue-500 rounded-lg '
+          className='bg-blue-500 rounded-lg'
           type="text"
           placeholder="Nome"
           value={name}
@@ -74,10 +74,11 @@ function App() {
 
       <div className='grid'>
         {heroes.map((hero) => (
-          <div className='bg-green-500' key={hero.id}>
-            <h2 className='bg-stone-500 text-white'>{hero.name}</h2>
-            <p className='bg-stone-500 text-white'>Universo: {hero.universe}</p>
-            <p className='bg-stone-500 text-white'>Poder: {hero.power}</p>
+          <div  key={hero.id}>
+
+            <h2 className='bg-black/50 text-white'>{hero.name}</h2>
+            <p className='bg-black/50 text-white'>Universo: {hero.universe}</p>
+            <p className='bg-black/50 text-white'>Poder: {hero.power}</p>
           </div>
         ))}
       </div>
